@@ -1,7 +1,7 @@
 ﻿
 namespace IniciandoComMysql
 {
-    partial class Form1
+    partial class FrmCadastroCliente
     {
         /// <summary>
         ///  Required designer variable.
@@ -70,7 +70,7 @@ namespace IniciandoComMysql
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(601, 430);
+            this.groupBox1.Size = new System.Drawing.Size(627, 430);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -79,6 +79,8 @@ namespace IniciandoComMysql
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -86,11 +88,12 @@ namespace IniciandoComMysql
             this.Email,
             this.Telefone,
             this.Endereco});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(6, 223);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(589, 201);
+            this.dataGridView1.Size = new System.Drawing.Size(615, 201);
             this.dataGridView1.TabIndex = 12;
             // 
             // Id
@@ -132,7 +135,7 @@ namespace IniciandoComMysql
             // 
             // btnPesquisa
             // 
-            this.btnPesquisa.Location = new System.Drawing.Point(248, 165);
+            this.btnPesquisa.Location = new System.Drawing.Point(256, 165);
             this.btnPesquisa.Name = "btnPesquisa";
             this.btnPesquisa.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisa.TabIndex = 11;
@@ -142,14 +145,14 @@ namespace IniciandoComMysql
             // 
             // textPesquisa
             // 
-            this.textPesquisa.Location = new System.Drawing.Point(93, 165);
+            this.textPesquisa.Location = new System.Drawing.Point(101, 165);
             this.textPesquisa.Name = "textPesquisa";
             this.textPesquisa.Size = new System.Drawing.Size(149, 23);
             this.textPesquisa.TabIndex = 10;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(465, 146);
+            this.btnSalvar.Location = new System.Drawing.Point(473, 146);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 8;
@@ -159,36 +162,40 @@ namespace IniciandoComMysql
             // 
             // textEndereco
             // 
-            this.textEndereco.Location = new System.Drawing.Point(93, 101);
+            this.textEndereco.Location = new System.Drawing.Point(101, 101);
             this.textEndereco.Name = "textEndereco";
             this.textEndereco.Size = new System.Drawing.Size(447, 23);
             this.textEndereco.TabIndex = 7;
+            this.textEndereco.TextChanged += new System.EventHandler(this.textEndereco_TextChanged);
             // 
             // textTelefone
             // 
-            this.textTelefone.Location = new System.Drawing.Point(403, 57);
+            this.textTelefone.Location = new System.Drawing.Point(411, 57);
             this.textTelefone.Name = "textTelefone";
             this.textTelefone.Size = new System.Drawing.Size(137, 23);
             this.textTelefone.TabIndex = 6;
+            this.textTelefone.TextChanged += new System.EventHandler(this.textTelefone_TextChanged);
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(93, 57);
+            this.textEmail.Location = new System.Drawing.Point(101, 57);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(220, 23);
             this.textEmail.TabIndex = 5;
+            this.textEmail.TextChanged += new System.EventHandler(this.textEmail_TextChanged);
             // 
             // textNome
             // 
-            this.textNome.Location = new System.Drawing.Point(93, 15);
+            this.textNome.Location = new System.Drawing.Point(101, 15);
             this.textNome.Name = "textNome";
             this.textNome.Size = new System.Drawing.Size(447, 23);
             this.textNome.TabIndex = 4;
+            this.textNome.TextChanged += new System.EventHandler(this.textNome_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 104);
+            this.label4.Location = new System.Drawing.Point(36, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 15);
             this.label4.TabIndex = 3;
@@ -197,7 +204,7 @@ namespace IniciandoComMysql
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(343, 60);
+            this.label3.Location = new System.Drawing.Point(351, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 15);
             this.label3.TabIndex = 2;
@@ -206,7 +213,7 @@ namespace IniciandoComMysql
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 60);
+            this.label2.Location = new System.Drawing.Point(51, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 1;
@@ -215,21 +222,21 @@ namespace IniciandoComMysql
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 18);
+            this.label1.Location = new System.Drawing.Point(52, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
-            // Form1
+            // FrmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 454);
+            this.ClientSize = new System.Drawing.Size(651, 454);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "FrmCadastroCliente";
+            this.Text = "Cadastro Cliente";
+            this.Load += new System.EventHandler(this.FrmCadastroCliente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
